@@ -22,6 +22,22 @@ python manage.py migrate
 ~~~
 python manage.py runserver
 ~~~
+
+# Rest api for GET Books 
+~~~
+http://127.0.0.1:8000/get_books/
+
+Request Body :-
+
+Response Body :
+  [
+    {
+        "book_name": "English",
+        "add_time": "2022-12-21T16:41:55.130467"
+    }
+  ]
+
+~~~
 # Rest api for add student 
 ~~~
 http://127.0.0.1:8000/add_student/
@@ -35,5 +51,12 @@ Response Body :
   
   
 ~~~
- # Rest api for add student 
+ # Rest api for add Books 
 ~~~
+  Request Body :
+  {"book_name":"English"}
+  
+  Response Body :
+  {
+    "success": true
+  }
