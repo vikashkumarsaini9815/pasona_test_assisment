@@ -3,7 +3,7 @@
 
 # Setup project
 ~~~
-git clone https://github.com/vikashkumarsaini9815/assiduus
+git clone https://github.com/vikashkumarsaini9815/pasona_test_assisment.git
 ~~~
 # installation
 ~~~
