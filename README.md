@@ -22,7 +22,6 @@ python manage.py migrate
 ~~~
 python manage.py runserver
 ~~~
-
 # Rest api for GET Books 
 ~~~
 http://127.0.0.1:8000/get_books/
@@ -53,6 +52,8 @@ Response Body :
 ~~~
  # Rest api for add Books 
 ~~~
+http://127.0.0.1:8000/add_book/
+
   Request Body :
   {"book_name":"English"}
   
@@ -60,3 +61,65 @@ Response Body :
   {
     "success": true
   }
+  
+  
+~~~
+ # Rest api for Borrow Book Student 
+~~~
+http://127.0.0.1:8000/borrow_book/
+
+  Request Body :
+  {"student_id":1,"book_id":1}
+  
+  Response Body :
+  {
+    "success": true
+  }
+  
+  
+~~~
+ # Rest api for Borrow Book return Time 
+~~~
+http://127.0.0.1:8000/return_book_time/
+
+  Request Body :
+  {"book_id":1}
+  
+  Response Body :
+  {
+    "success": true,
+    "message": "return time Update Successfully"
+  }
+  
+  
+~~~
+ # Rest api for Borrow Book Renew 
+~~~
+http://127.0.0.1:8000/borrow_book_renew/
+
+  Request Body :
+  {"book_id":1}
+  
+  Response Body :
+  {
+    "success": true,
+    "message": "Renew your book  Update Successfully"
+  }
+  
+  
+~~~
+# Rest api for GET borrow books 
+~~~
+http://127.0.0.1:8000/get_borrow_books/pk/
+
+Request Body :-
+
+Response Body :
+  [
+    {
+        "borrow_time": "2022-12-21T17:38:01.164828",
+        "return_time": "2022-12-21T16:54:51.212650",
+        "book": 1,
+        "student": 1
+    }
+  ]
